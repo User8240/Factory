@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dr. Sillystringz's Factory</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="~/css/styles.css">
+  </head>
+  <body>
+    <h1 class="header">@Html.ActionLink("Dr. Sillystringz's Factory", "Index", "Home")</h1>
+    <hr/>
+    <h3 class="bar">@Html.ActionLink("Machines", "Index", "Machines") | @Html.ActionLink("Engineers", "Index", "Engineers")</h3>
+
+    <div class="container">
+      <div class="jumbotron">
+        @RenderBody()
+      </div>
+    </div>
+   
+  </body>
+</html>
