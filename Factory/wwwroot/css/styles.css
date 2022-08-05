@@ -1,0 +1,51 @@
+body {
+  font-family: helvetica;
+  font-size: 1rem;
+}
+
+.header {
+  text-align: center;
+}
+
+.header a {
+  font-family: helvetica;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header a {
+  color: #ff0099;
+  background-color: transparent;
+  text-decoration-style: none;
+  text-decoration-color: none;
+}
+
+.header a:hover {
+  color: #ff1ca488;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  text-decoration-color: none;
+}
+
+.bar a {
+  font-family: helvetica;
+  font-size: 1rem;
+}
+
+.bar {
+  text-align: center;
+}
+
+.bar a {
+  color: #ff0099;
+  background-color: transparent;
+  text-decoration-style: none;
+  text-decoration-color: none;
+}
+
+.bar a:hover {
+  color: #ff1ca488;
+  text-decoration-line: none;
+  text-decoration-style: none;
+  text-decoration-color: none;
+}
