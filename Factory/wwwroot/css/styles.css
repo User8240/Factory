@@ -79,9 +79,6 @@ body a:hover {
   font-family: helvetica;
   font-size: 2rem;
   font-weight: bold;
-}
-
-.header a {
   color: #ff0099;
   background-color: transparent;
   text-decoration-style: none;
@@ -95,16 +92,13 @@ body a:hover {
   text-decoration-color: none;
 }
 
-.bar a {
-  font-family: helvetica;
-  font-size: 1rem;
-}
-
 .bar {
   text-align: center;
 }
 
 .bar a {
+  font-family: helvetica;
+  font-size: 1rem;
   color: #ff0099;
   background-color: transparent;
   text-decoration-style: none;
