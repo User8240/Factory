@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using Factory.Models;
@@ -55,6 +56,24 @@ namespace Factory.Controllers
       var thisEngineer = _db.Machines.FirstOrDefault(Machine => Machine.MachineId == id);
       _db.Machines.Remove(thisEngineer);
       _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+
+        public ActionResult AddMachine(int id)
+    {
+      var thisEngineer = _db.Engineers.FirstOrDefault(Engineer => Engineer.EngineerId == id);
+      ViewBag.MachineId = new SelectList(_db.Machines, "MachineId", "Name");
+      return View(thisEngineer);
+    }
+
+    [HttpPost]
+    public ActionResult AddEngineer(Machine machine, int EngineerId)
+    {
+      if (EngineerId != 0)
+      {
+        _db.EngineerMachine.Add(new EngineerMachine() { EngineerId = EngineerId, MachineId = machine.MachineId });
+        _db.SaveChanges();
+      }
       return RedirectToAction("Index");
     }
   }
