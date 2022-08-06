@@ -2,8 +2,46 @@
   Layout = "_Layout";
 }
 
-<h1>This is the homepage...</h1>
+@using Factory.Models
+
+<h1 class=splash>Dr. Sillystringz's Factory</h1>
+<br>
+<h1>⚙️</h1>
 
 <hr/>
 
-<h3 class="navbar">@Html.ActionLink("See all Engineers", "Index", "Engineers") | @Html.ActionLink("See all Machines", "Index", "Machines")</h3>
+<h2> All Engineers </h2>
+
+
+<h4 class="navbar">@Html.ActionLink("Add Engineer ✎", "Create", "Engineers")</h4>
+
+@if (@ViewBag.AllEngineers.Count == 0)
+{
+  <h3><em>No Engineers have been added yet!</em></h3>
+}
+
+<ul>
+@foreach (Engineer engineer in ViewBag.AllEngineers)
+{
+  <li>@Html.ActionLink($"{engineer.Name}", "Details", "Engineers", new { id = engineer.EngineerId })</li>
+}
+</ul>
+
+<hr/>
+
+<h2> All Machines </h2>
+
+
+<h4 class="navbar">@Html.ActionLink("Add Machine ✎", "Create", "Machines")</h4>
+
+@if (@ViewBag.AllMachines.Count == 0)
+{
+  <h3><em>No Machines have been added yet!</em></h3>
+}
+
+<ul>
+@foreach (Machine machine in ViewBag.AllMachines)
+{
+  <li>@Html.ActionLink($"{machine.Name}", "Details", "Machines", new { id = machine.MachineId })</li>
+}
+</ul>
